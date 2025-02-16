@@ -1,22 +1,23 @@
 function isLeap(year) {
+    
     var isDividedByFour = year % 4 === 0;
-
+    
     if (isDividedByFour) {
         var isDividedByOneHundred = year % 100 === 0;
-
-        if (!isDividedByOneHundred) {
-            return "🐸  Leap Year!";
-        } else {
+        
+        if (isDividedByOneHundred) {
             var isDividedByFourHundred = year % 400 === 0;
 
             if (isDividedByFourHundred) {
-                return "🐸  Leap Year!";
+                return "🐸 Leap year.";
             } else {
-                return "❌  Not a Leap Year.";
+                return "❌ Not leap year.";
             }
+        } else {
+            return "🐸 Leap year.";
         }
     } else {
-        return "❌  Not a Leap Year.";
+        return "❌ Not leap year.";
     }
 }
 
