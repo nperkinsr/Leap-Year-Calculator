@@ -1,0 +1,92 @@
+:root {
+    --color1: #000000;  /* Black */
+    --color2: #ffffff;  /* White */
+    --color3: #08D9D6;  /* Blue */
+    --color4: #252A34;  /* Dark Grey */
+    --color5: #FF2E63;  /* Red */
+    --color6: #EAEAEA;  /* Grey */
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--color6);
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./assets/abstract.png') repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.container {
+    background: var(--color4);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 7px 9px 0px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    font-size: 26px;
+    padding-bottom: 01rem;
+}
+
+input {
+    width: 94%;
+    padding: 10px;
+    background-color: var(--color6);
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    background: var(--color5);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}  
+
+button:hover {
+    background: var(--color3);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
