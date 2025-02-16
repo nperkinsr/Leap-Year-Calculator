@@ -41,5 +41,5 @@ function checkLeapYear() {
 
     let message = isLeap(year);
     result.innerHTML = message;
-    result.style.color = message === "🐸 Leap Year!" ? "#9DC08B" : "#FF2E63";  // Green for leap year, red for not a leap year
+    result.style.color = message === "🐸 Leap year!" ? "#9DC08B" : "#FF2E63";  // Green for leap year, red for not a leap year
 }
